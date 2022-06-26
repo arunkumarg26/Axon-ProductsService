@@ -13,7 +13,10 @@ import com.omnicell.example.axon.ProductsService.command.CreateProductCommand;
 import com.omnicell.example.axon.ProductsService.core.data.ProductLookupEntity;
 import com.omnicell.example.axon.ProductsService.core.data.ProductLookupRepository;
 
+import lombok.extern.slf4j.Slf4j;
+
 @Component
+@Slf4j
 public class CreateProductCommandInterceptor implements MessageDispatchInterceptor<CommandMessage<?>> {
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(CreateProductCommandInterceptor.class);
@@ -29,7 +32,7 @@ public class CreateProductCommandInterceptor implements MessageDispatchIntercept
 		 
 		return (index, command) -> {
 			
-			LOGGER.info("Intercepted command: " + command.getPayloadType());
+			log.info("Intercepted command: " + command.getPayloadType());
 			
 			if(CreateProductCommand.class.equals(command.getPayloadType())) {
 				

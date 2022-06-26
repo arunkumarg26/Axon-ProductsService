@@ -17,31 +17,28 @@ import com.omnicell.example.axon.ProductsService.core.errorhandling.ProductsServ
 
 @EnableDiscoveryClient
 @SpringBootApplication
-public class ProductsServiceApplication {
+public class ProductsServiceApplication
+{
 
-	public static void main(String[] args) {
-		SpringApplication.run(ProductsServiceApplication.class, args);
-	}
-	
-	@Autowired
-	public void registerCreateProductCommandInterceptor(ApplicationContext context, 
-			CommandBus commandBus) {
-		commandBus.registerDispatchInterceptor(context.getBean(CreateProductCommandInterceptor.class));
-		
-	}
-	
-	@Autowired
-	public void configure(EventProcessingConfigurer config) {
-		config.registerListenerInvocationErrorHandler("product-group", 
-				conf -> new ProductsServiceEventsErrorHandler());
-		
-//		config.registerListenerInvocationErrorHandler("product-group", 
-//				conf -> PropagatingErrorHandler.instance());
-	}
-	
-	@Bean(name="productSnapshotTriggerDefinition")
-	public SnapshotTriggerDefinition productSnapshotTriggerDefinition(Snapshotter snapshotter) {
-		return new EventCountSnapshotTriggerDefinition(snapshotter, 3);
-	}
+    public static void main(String[] args)
+    {
+        SpringApplication.run(ProductsServiceApplication.class, args);
+    }
+
+    @Autowired
+    public void registerCreateProductCommandInterceptor(ApplicationContext context, CommandBus commandBus)
+    {
+        commandBus.registerDispatchInterceptor(context.getBean(CreateProductCommandInterceptor.class));
+
+    }
+
+    @Autowired
+    public void configure(EventProcessingConfigurer config)
+    {
+        config.registerListenerInvocationErrorHandler("product-group", conf -> new ProductsServiceEventsErrorHandler());
+
+    }
+
+
 
 }
