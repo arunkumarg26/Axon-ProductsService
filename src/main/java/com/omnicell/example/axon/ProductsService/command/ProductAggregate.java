@@ -10,10 +10,10 @@ import org.axonframework.spring.stereotype.Aggregate;
 import org.springframework.beans.BeanUtils;
 
 import com.omnicell.example.axon.ProductsService.core.events.ProductCreatedEvent;
-import com.appsdeveloperblog.estore.core.commands.CancelProductReservationCommand;
-import com.appsdeveloperblog.estore.core.commands.ReserveProductCommand;
-import com.appsdeveloperblog.estore.core.events.ProductReservationCancelledEvent;
-import com.appsdeveloperblog.estore.core.events.ProductReservedEvent;
+import com.omnicell.example.axon.core.commands.CancelProductReservationCommand;
+import com.omnicell.example.axon.core.commands.ReserveProductCommand;
+import com.omnicell.example.axon.core.events.ProductReservationCancelledEvent;
+import com.omnicell.example.axon.core.events.ProductReservedEvent;
 
 
 @Aggregate

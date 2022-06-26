@@ -4,15 +4,13 @@ import org.axonframework.config.ProcessingGroup;
 import org.axonframework.eventhandling.EventHandler;
 import org.axonframework.eventhandling.ResetHandler;
 import org.axonframework.messaging.interceptors.ExceptionHandler;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
 import com.omnicell.example.axon.ProductsService.core.data.ProductEntity;
 import com.omnicell.example.axon.ProductsService.core.data.ProductsRepository;
 import com.omnicell.example.axon.ProductsService.core.events.ProductCreatedEvent;
-import com.appsdeveloperblog.estore.core.events.ProductReservationCancelledEvent;
-import com.appsdeveloperblog.estore.core.events.ProductReservedEvent;
+import com.omnicell.example.axon.core.events.ProductReservationCancelledEvent;
+import com.omnicell.example.axon.core.events.ProductReservedEvent;
 
 import lombok.extern.slf4j.Slf4j;
 
