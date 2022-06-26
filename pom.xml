@@ -9,7 +9,7 @@
 		<version>2.4.3</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.appsdeveloperblog.estore</groupId>
+	<groupId>com.omnicell.example.axon</groupId>
 	<artifactId>ProductsService</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ProductsService</name>
@@ -68,7 +68,7 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.appsdeveloperblog.estore</groupId>
+			<groupId>com.omnicell.example.axon</groupId>
 			<artifactId>core</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
